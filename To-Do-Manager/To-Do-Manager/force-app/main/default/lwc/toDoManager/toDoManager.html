@@ -1,0 +1,17 @@
+<template>
+   <lightning-layout multiple-rows>
+      <lightning-layout-item size="12" padding="around-small">
+      <c-task-started onrefreshtodo={refreshtodo}></c-task-started>
+      </lightning-layout-item>
+      <lightning-layout-item size="6" padding="around-small">
+         <c-to-do-list lwc:ref="pendingToDo" task-status="Pending" onrefreshtodo={refreshtodo}></c-to-do-list>
+      </lightning-layout-item>
+      <lightning-layout-item size="6" padding="around-small">
+         <c-to-do-list 
+         lwc:ref="completedToDo"
+         task-status="Completed"
+         onrefreshtodo={refreshtodo}>
+      </c-to-do-list>
+      </lightning-layout-item>
+   </lightning-layout>
+</template>
